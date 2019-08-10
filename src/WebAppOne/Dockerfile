@@ -3,10 +3,9 @@ WORKDIR /app
 EXPOSE 80
 EXPOSE 443
 
-FROM mcr.microsoft.com/dotnet/core/sdk:3.0-buster AS build
+FROM dotnetcore/dotnet-dockerbuild AS build
 WORKDIR /src
-COPY . ./
-RUN dotnet publish WebAppOne -c Release -o out
+RUN dotnet publish WebAppOne -c Release -o out --no-restore --no-build
 
 FROM base AS final
 WORKDIR /app

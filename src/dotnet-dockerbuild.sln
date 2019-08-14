@@ -5,8 +5,13 @@ VisualStudioVersion = 16.0.29102.190
 MinimumVisualStudioVersion = 15.0.26124.0
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution", "Solution", "{309B52D2-571D-458F-AD73-26AC6809D6B8}"
 	ProjectSection(SolutionItems) = preProject
+		.env = .env
+		build-N-run-docker-compose.ps1 = build-N-run-docker-compose.ps1
 		build.ps1 = build.ps1
+		docker-compose.yml = docker-compose.yml
 		Dockerfile = Dockerfile
+		make-cert.ps1 = make-cert.ps1
+		run-docker-compose.ps1 = run-docker-compose.ps1
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{36741E58-9458-4A3B-8DBA-7E6B6B11E05E}"
@@ -17,9 +22,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LibOne", "LibOne\LibOne.csp
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebApplication1", "WebApplication1\WebApplication1.csproj", "{D20CCA97-E0DB-4CEB-ADC0-C37924056B52}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebAppOne", "WebAppOne\WebAppOne.csproj", "{E7138857-820C-4E97-80BB-05230C19B427}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebAppOne", "WebAppOne\WebAppOne.csproj", "{E7138857-820C-4E97-80BB-05230C19B427}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebAppTwo", "WebAppTwo\WebAppTwo.csproj", "{026FB6E8-498F-481E-AD12-B0D5C20492A1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebAppTwo", "WebAppTwo\WebAppTwo.csproj", "{026FB6E8-498F-481E-AD12-B0D5C20492A1}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

@@ -3,8 +3,73 @@
 @{
     ViewData["Title"] = "Home page";
 }
-
+@{ 
+    var hostName = $"{Model.Request.Scheme}://{Model.Request.Host.Value}";
+}
 <div class="text-center">
     <h1 class="display-4">Welcome</h1>
     <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+</div>
+<div>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>
+                    Request
+                </th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>
+                    Host Name
+                </td>
+                <td>
+                    @hostName
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Path
+                </td>
+                <td>
+                    @Model.Request.Path.Value
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    QueryString
+                </td>
+                <td>
+                    @Model.Request.QueryString.Value
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>
+                    Header
+                </th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model.Request.Headers)
+            {
+                <tr>
+                    <td>
+                        @item.Key
+                    </td>
+                    <td>
+                        @item.Value
+                    </td>
+                </tr>
+            }
+            </tbody>
+    </table>
+
 </div>
